@@ -18,9 +18,7 @@ try:
     
     for port in range(1,65535): 
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
-        socket.setdefaulttimeout(1) 
-        
-        #print(int((port/65535)*100),"%")
+        socket.setdefaulttimeout(1)
 
         sys.stdout.write("Scanning ... %s %%\r" % (int((port/65535)*100)))
         sys.stdout.flush()
